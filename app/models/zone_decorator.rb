@@ -1,4 +1,4 @@
-Zone.class_eval do
+Spree::Zone.class_eval do
   def include?(address)
     return false unless address
 

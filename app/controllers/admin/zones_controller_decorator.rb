@@ -1,4 +1,4 @@
-Admin::ZonesController.class_eval do
+Spree::Admin::ZonesController.class_eval do
   before_filter :load_cities, :except => [:index]
 
 protected

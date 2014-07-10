@@ -1,4 +1,4 @@
-class City < ActiveRecord::Base
+class Spree::City < ActiveRecord::Base
   has_one :zone_member, :as => :zoneable
   has_one :zone, :through => :zone_member
   belongs_to :state
