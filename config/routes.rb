@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # Add your extension routes here
+  Spree::Core::Engine.routes.draw do 
     namespace :admin do
       resources :cities, :only => :index
       resources :countries do
@@ -9,4 +10,5 @@ Rails.application.routes.draw do
         end
       end
     end
+  end
 end
