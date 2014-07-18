@@ -1,8 +1,9 @@
 module Spree
   module Admin
     class CitiesController < Spree::Admin::ResourceController
-      belongs_to :state, class_name: 'Spree::State'
+      
       before_filter :load_data
+      belongs_to :state, class_name: 'Spree::State'
 
       def index
         respond_with(@collection) do |format|
