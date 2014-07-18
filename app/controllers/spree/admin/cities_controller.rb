@@ -1,7 +1,6 @@
 module Spree
   module Admin
     class CitiesController < Spree::Admin::ResourceController
-      State = Spree::State.class
       belongs_to :state, class_name: 'Spree::State'
       before_filter :load_data
 
