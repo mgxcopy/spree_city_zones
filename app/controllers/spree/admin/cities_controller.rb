@@ -1,7 +1,7 @@
 module Spree
   module Admin
     class CitiesController < Admin::ResourceController
-      belongs_to :spree_state
+      belongs_to :state
       before_filter :load_data
 
       def index
