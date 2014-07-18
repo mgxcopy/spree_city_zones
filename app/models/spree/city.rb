@@ -1,9 +1,9 @@
 module Spree
   class City < ActiveRecord::Base
-    has_one :zone_member, :as => :zoneable
-    has_one :zone, :through => :zone_member
-    belongs_to :state
-    has_one :country, :through => :state
+    has_one :spree_zone_member, :as => :zoneable
+    has_one :spree_zone, :through => :spree_zone_member
+    belongs_to :spree_state
+    has_one :spree_country, :through => :spree_state
     validates_presence_of :name
     validates_uniqueness_of :name, :scope => [:state_id]
     

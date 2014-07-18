@@ -1,3 +1,3 @@
 Spree::Country.class_eval do
-  has_many :cities, :through => :states
+  has_many :spree_cities, :through => :spree_states
 end

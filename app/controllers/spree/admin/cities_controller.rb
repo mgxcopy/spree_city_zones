@@ -1,7 +1,7 @@
 module Spree
   module Admin
     class CitiesController < Admin::ResourceController
-      belongs_to :state
+      belongs_to :spree_state
       before_filter :load_data
 
       def index
@@ -26,10 +26,10 @@ module Spree
       end
 
       def load_data
-        @countries = Country.order(:name)
-        @country = Country.find(params[:country_id])
-        @states = State.order(:name)
-        @state = State.find(params[:state_id])
+        @countries = Spree::Country.order(:name)
+        @country = Spree::Country.find(params[:country_id])
+        @states = Spree::State.order(:name)
+        @state = Spree::State.find(params[:state_id])
       end
     end
   end

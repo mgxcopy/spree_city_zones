@@ -4,7 +4,7 @@ Spree::Admin::ZonesController.class_eval do
 protected
 
   def load_cities
-    @cities = City.order(:name)
+    @cities = Spree::City.order(:name)
   end
 
 end
